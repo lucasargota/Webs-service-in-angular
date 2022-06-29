@@ -1,0 +1,10 @@
+#caja{
+    margin: 0;
+ background-color: #827397;
+    font-family: sans-serif;
+    display: grid;
+    color: aliceblue;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    
+}

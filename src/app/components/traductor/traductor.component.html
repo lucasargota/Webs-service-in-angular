@@ -1,0 +1,62 @@
+  <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button"  (click)="cambiarSource('it')" class="btn btn-secondary btn-lg">Italiano</button>
+          </div>
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button"  (click)="cambiarSource('fr')" class="btn btn-secondary btn-lg">Frances</button>
+          </div>
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button"  (click)="cambiarSource('en')" class="btn btn-secondary btn-lg">Ingles</button>
+          </div>
+          <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button" (click)="cambiarSource('es')"  class="btn btn-secondary btn-lg">Español</button>
+          </div>
+          <div class="col-12" style="background-color: rgb(100, 237, 225); border-radius: 10px;">
+            <div class="input-group">
+                <span class="input-group-text" >texto a traducir</span>
+                <input [(ngModel)]="text" name="text" class="form-control"  style="background-color: rgb(100, 237, 225);" >
+              </div>          </div>
+
+
+        </div>
+
+<br>
+<br>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button" (click)="cambiarTarget('it')"  class="btn btn-secondary btn-lg">Italiano</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button"  (click)="cambiarTarget('fr')" class="btn btn-secondary btn-lg">Frances</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button" (click)="cambiarTarget('en')"  class="btn btn-secondary btn-lg">Ingles</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 "><button type="button" (click)="cambiarTarget('es')" class="btn btn-secondary btn-lg">Español</button>
+                </div>
+              <div class="col-12" style="border-radius: 20px;"> <div class="d-grid gap-2">
+                <button class="btn btn-primary" (click)="traducir()" type="button">TRADUCIR</button>
+              </div></div>
+              <div class="col-12" style="background-color: rgb(100, 237, 225); border-radius: 10px;">
+                <div class="input-group">
+                    <span class="input-group-text" >Texto Tradicido</span>
+                    <fieldset disabled> 
+                      <textarea class="form-control" style="background-color: rgb(100, 237, 225);" placeholder="{{tranlateText}}"></textarea>
+                    </fieldset>
+                  </div>        
+                
+                </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"><button type="button" class="btn btn-primary">
+                <i class="bi bi-folder-symlink"></i>
+                
+              </button></div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 "><button type="button" class="btn btn-success">
+            
+                <i class="bi bi-front"></i>
+              </button></div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 "><button type="button" class="btn btn-outline-danger">
+                
+                <i class="bi bi-x-square"></i>
+                
+              </button></div>
+  
+    
+    
+            </div>
+      </div>
