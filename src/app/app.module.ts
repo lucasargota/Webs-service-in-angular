@@ -10,6 +10,9 @@ import { FooterComponent } from './components/layouts/footer/footer.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { DivisasComponent } from './components/divisas/divisas.component';
 import { GeneratorComponent } from './components/generator/generator.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { CodeQrDirective } from './code-qr.directive';
+
 
 @NgModule({
   declarations: [
@@ -19,13 +22,15 @@ import { GeneratorComponent } from './components/generator/generator.component';
     FooterComponent,
     MoviesComponent,
     DivisasComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    CodeQrDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

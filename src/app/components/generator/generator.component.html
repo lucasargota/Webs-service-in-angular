@@ -4,8 +4,8 @@
             <form action="" method="post" #qrForm="ngForm">
                 <div class="my-3">
                     <label for="url" class="form-label">URL</label>
-                    <input class="form-control" type="url" [(ngModel)]="urlInput" name="urlInput" id="urlInput"
-                        required #url="ngModel">
+                    <input class="form-control" type="url" [(ngModel)]="urlInput" name="urlInput" id="urlInput" required
+                        #url="ngModel">
                     <div *ngIf="url.invalid" class="alert alert-danger my-1 p-1">
                         <div *ngIf="url.errors?.['required']">
                             El campo URL es requerido
@@ -13,7 +13,8 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary" [disabled]="qrForm.form.invalid" (click)="generar()">Generar</button>
+                    <button type="button" class="btn btn-primary" [disabled]="qrForm.form.invalid"
+                        (click)="generar()">Generar</button>
                 </div>
             </form>
         </div>
@@ -23,4 +24,29 @@
             <div [innerHtml]="qrImg"></div>
         </div>
     </div>
+
+
+
+
+
+
+    <form action="" method="post" #qrForm="ngForm">
+        <div class="my-3">
+            <label for="url" class="form-label">URL</label>
+            <input class="form-control" type="url" [(ngModel)]="urlN" name="urlN" id="urlN" required
+                #url="ngModel">
+            <div *ngIf="url.invalid" class="alert alert-danger my-1 p-1">
+                <div *ngIf="url.errors?.['required']">
+                    El campo URL es requerido
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" 
+                (click)="change()">Generar</button>
+        </div>
+    </form>
+    <qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'">
+    </qrcode>
+    <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
 </div>
